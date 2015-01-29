@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h2><strong>Project Name:</strong></h2>
+  <h3><%= @project.name %><h3>
+</p>
+
+<div id="project_new_task">
+</div>
+
+<h2 id="incomplete">Incomplete Tasks</h2>
+  <div class="tasks" id="incomplete_tasks">
+  	<%= render @project.incomplete_tasks %>
+  </div>
+<h2 id="complete">Complete Tasks</h2>
+  <div class="tasks" id="complete_tasks">
+    <%= render @project.complete_tasks %>
+  </div><br/>
+<%=link_to 'New Project Task', new_task_path(:id=> @project.id),:remote=> true, :class=> "btn btn-primary" %> |
+<%= link_to 'Back', projects_path, :class=> "btn btn-default" %>
+

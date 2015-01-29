@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ProjectExample</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container"> 
+  <div id='notice'>
+  	<%= render :partial => 'shared/flash_messages' , :locals => { :flash => flash } %>
+	</div>   
+	<%= yield %>
+</div>
+</body>
+</html>

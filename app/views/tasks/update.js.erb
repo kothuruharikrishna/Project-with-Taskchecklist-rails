@@ -1,0 +1,7 @@
+<% if @task.complete %>
+  $("#notice").html("<%= escape_javascript(render :partial => 'shared/flash_messages' , :locals => { :flash => flash }).html_safe %>").show().fadeOut(4000);
+  $('#edit_task_<%= @task.id %>').appendTo('#complete_tasks');
+<% else %>
+  $("#notice").html("<%= escape_javascript(render :partial => 'shared/flash_messages' , :locals => { :flash => flash }).html_safe %>").show().fadeOut(4000);
+  $('#edit_task_<%= @task.id %>').appendTo('#incomplete_tasks');
+<% end %>

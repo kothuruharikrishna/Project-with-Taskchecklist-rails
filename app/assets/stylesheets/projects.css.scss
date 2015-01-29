@@ -1,0 +1,53 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#complete_tasks form {
+	font-size: 12px;
+	color: #777;
+	margin: 3px 0;
+	label { text-decoration: line-through; }
+}
+
+#complete_tasks
+{
+	background-color: lavenderblush;
+	width: 40%;
+	padding: 5px;
+	border: 1px solid #d4d4d4;
+	border-radius: 20px;
+	word-wrap: break-word;
+}
+
+#incomplete_tasks
+{
+	background-color: aliceblue;
+	width: 40%;
+	font-size: 12px;
+	padding: 5px;
+	border: 1px solid #d4d4d4;
+	word-wrap: break-word;
+	border-radius: 20px;
+}
+
+h2#incomplete
+{
+	background-color: dimgray;
+	width: 40%;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+h2#complete
+{
+	background-color: cornsilk;
+	width: 40%;
+	border-radius: 10px;
+	padding: 10px;
+}
+#dropdown-search
+{ 
+	float: right;
+
+}

@@ -1,0 +1,10 @@
+<% if @task.errors.any? %>
+	$('#error-div').html("<%= j(render :partial => 'shared/error_messages', locals: {:target => @task}) %>");
+<% else %>
+    $('#incomplete_tasks').append('<%= j render @task %>');
+	$("#notice").html("<%= escape_javascript(render :partial => 'shared/flash_messages' , :locals => { :flash => flash }).html_safe %>").show().fadeOut(3000);
+	$('#new_task')[0].reset();
+	$("#project_new_task").html("");
+	
+<% end %>
+

@@ -1,0 +1,8 @@
+<% if @project.errors.any? %>
+	$('#error-div').html("<%= j(render :partial => 'shared/error_messages', locals: {:target => @project}) %>");
+<% else %>
+	$("#notice").html("<%= escape_javascript(render :partial => 'shared/flash_messages' , :locals => { :flash => flash }).html_safe %>").show().fadeOut(3000);
+	$("#projects").html("<%= j render :partial=> 'project_list' %>");
+	$(":input:not(input[type=submit])").val("");
+	$("#new_project").html("");
+<% end %>

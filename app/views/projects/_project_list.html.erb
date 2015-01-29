@@ -1,0 +1,9 @@
+<% @projects.each do |project| %>
+	<tr>
+		<td id="project<%= project.id %>"><%= project.name %></td>
+		<td><%= link_to 'Show', project, :class=> "btn btn-default" %></td>
+		<td><%= link_to 'Edit', edit_project_path(project),:remote=> true,:class=> "btn btn-default" %></td>
+		<td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' },:remote=> true, :class=> "btn btn-danger" %></td>
+	</tr>
+<% end %>
+
